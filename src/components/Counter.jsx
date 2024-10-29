@@ -1,9 +1,9 @@
 import React, { Component } from "react";
 
 export default class Counter extends Component {
-  getName() {
-    return <h1>Big Name</h1>;
-  }
+  // getName() {
+  //   return <h1>Big Name</h1>;
+  // }
 
   formatText() {
     if (this.props.counter.value > 0) {
@@ -20,17 +20,17 @@ export default class Counter extends Component {
     }
   }
 
-  renderTags() {
-    return (
-      this.state.tags.length > 0 && (
-        <ul>
-          {this.state.tags.map((tag) => (
-            <li key={tag}>{tag}</li>
-          ))}
-        </ul>
-      )
-    );
-  }
+  // renderTags() {
+  //   return (
+  //     this.state.tags.length > 0 && (
+  //       <ul>
+  //         {this.state.tags.map((tag) => (
+  //           <li key={tag}>{tag}</li>
+  //         ))}
+  //       </ul>
+  //     )
+  //   );
+  // }
 
   render() {
     const { counter, onDecrement, onDelete, onIncrement } = this.props;
@@ -39,7 +39,7 @@ export default class Counter extends Component {
         <div className="m-4">
           <span className={this.getClassName()}>{this.formatText()}</span>
           <button
-            disabled={this.props.counter.value === 0}
+            disabled={counter.value === 0}
             onClick={() => onDecrement(counter.id)}
             className="btn btn-primary ms-4"
           >
