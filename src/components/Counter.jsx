@@ -1,14 +1,6 @@
 import React, { Component } from "react";
 
 export default class Counter extends Component {
-  state = {
-    name: "Hello Wolrd",
-    image: "http://picsum.photos/200",
-    // count: 0,
-    count2: 1,
-    tags: ["tag1", "tag2", "tag3"],
-  };
-
   getName() {
     return <h1>Big Name</h1>;
   }
@@ -47,7 +39,7 @@ export default class Counter extends Component {
         <div className="m-4">
           <span className={this.getClassName()}>{this.formatText()}</span>
           <button
-            disabled={counter.value === 0}
+            disabled={this.props.counter.value === 0}
             onClick={() => onDecrement(counter.id)}
             className="btn btn-primary ms-4"
           >

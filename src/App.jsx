@@ -10,6 +10,7 @@ export default class App extends Component {
       { id: 2, value: 0 },
       { id: 3, value: 0 },
     ],
+    counters2: [],
   };
 
   handleDelete = (id) => {
@@ -30,6 +31,7 @@ export default class App extends Component {
   };
 
   handleDecrement = (id) => {
+    // this.state.count++;
     this.setState({
       counters: this.state.counters.map((counter) => {
         if (counter.id === id) {
@@ -54,7 +56,9 @@ export default class App extends Component {
             onIncrement={this.handleIncrement}
             onDecrement={this.handleDecrement}
             onDelete={this.handleDelete}
-          ></Counters>
+          >
+            Hello
+          </Counters>
         </div>
       </div>
     );
