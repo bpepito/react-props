@@ -19,8 +19,6 @@ export default class App extends Component {
   };
 
   handleIncrement = (id) => {
-    // this.state.count++;
-
     this.setState({
       counters: this.state.counters.map((counter) => {
         if (counter.id === id) {
@@ -29,11 +27,9 @@ export default class App extends Component {
         return counter;
       }),
     });
-    // console.log("count", this.state.count);
   };
 
   handleDecrement = (id) => {
-    // this.state.count++;
     this.setState({
       counters: this.state.counters.map((counter) => {
         if (counter.id === id) {
@@ -42,8 +38,6 @@ export default class App extends Component {
         return counter;
       }),
     });
-
-    // console.log("count", this.state.count2);
   };
 
   getCountersWithValueLength = () => {
@@ -60,9 +54,7 @@ export default class App extends Component {
             onIncrement={this.handleIncrement}
             onDecrement={this.handleDecrement}
             onDelete={this.handleDelete}
-          >
-            Hello
-          </Counters>
+          ></Counters>
         </div>
       </div>
     );

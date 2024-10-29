@@ -6,7 +6,6 @@ export default class Counters extends Component {
     // const props = this.props;
     // console.log("props", props);
     const { counters, onDelete, onIncrement, onDecrement } = this.props;
-    // console.log("counters", counters);
     return (
       <div>
         {counters.map((counter) => (
@@ -18,9 +17,6 @@ export default class Counters extends Component {
             onDelete={onDelete}
           />
         ))}
-        {/* <Counter />
-        <Counter />
-        <Counter /> */}
       </div>
     );
   }

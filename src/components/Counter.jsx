@@ -41,9 +41,6 @@ export default class Counter extends Component {
   }
 
   render() {
-    // const props = this.props;
-    // console.log("props", props);
-
     const { counter, onDecrement, onDelete, onIncrement } = this.props;
     return (
       <>
@@ -69,13 +66,6 @@ export default class Counter extends Component {
             Delete
           </button>
         </div>
-        {/* {this.getName()} */}
-        {/* {this.renderTags()} */}
-        {/* <img src={this.state.image}></img> */}
-        {/* <div>Name: {this.state.name}</div> */}
-        {/* <div>Counter: {this.state.count}</div> */}
-        {/* <div>Counter: {this.state.count2}</div>
-        <button onClick={() => this.increment2()}>Increment</button> */}
       </>
     );
   }
