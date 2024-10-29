@@ -1,10 +1,6 @@
 import React, { Component } from "react";
 
 export default class Counter extends Component {
-  // getName() {
-  //   return <h1>Big Name</h1>;
-  // }
-
   formatText() {
     if (this.props.counter.value > 0) {
       return this.props.counter.value;
@@ -19,18 +15,6 @@ export default class Counter extends Component {
       return "badge bg-warning text-dark";
     }
   }
-
-  // renderTags() {
-  //   return (
-  //     this.state.tags.length > 0 && (
-  //       <ul>
-  //         {this.state.tags.map((tag) => (
-  //           <li key={tag}>{tag}</li>
-  //         ))}
-  //       </ul>
-  //     )
-  //   );
-  // }
 
   render() {
     const { counter, onDecrement, onDelete, onIncrement } = this.props;
