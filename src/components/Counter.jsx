@@ -1,13 +1,22 @@
 import React, { Component } from "react";
 
 export default class Counter extends Component {
-  state = {
-    name: "Hello Wolrd",
-    image: "http://picsum.photos/200",
-    // count: 0,
-    count2: 1,
-    tags: ["tag1", "tag2", "tag3"],
-  };
+  // props
+
+  // this.props - from parent down here
+
+  //   name = "Hello World";
+  //   state = {
+  //     name: "Hello Wolrd",
+  //     image: "http://picsum.photos/200",
+  //     // count: 0,
+  //     count2: 1,
+  //     tags: ["tag1", "tag2", "tag3"],
+  //   };
+
+  constructor() {
+    super();
+  }
 
   getName() {
     return <h1>Big Name</h1>;
@@ -41,29 +50,26 @@ export default class Counter extends Component {
   }
 
   render() {
-    // const props = this.props;
-    // console.log("props", props);
-
-    const { counter, onDecrement, onDelete, onIncrement } = this.props;
+    console.log("props", this.props);
     return (
       <>
         <div className="m-4">
           <span className={this.getClassName()}>{this.formatText()}</span>
           <button
-            disabled={counter.value === 0}
-            onClick={() => onDecrement(counter.id)}
+            disabled={this.props.counter.value == 0}
+            onClick={() => this.props.onDecrement(this.props.counter.id)}
             className="btn btn-primary ms-4"
           >
             -
           </button>
           <button
-            onClick={() => onIncrement(counter.id)}
+            onClick={() => this.props.onIncrement(this.props.counter.id)}
             className="btn btn-secondary ms-1"
           >
             +
           </button>
           <button
-            onClick={() => onDelete(counter.id)}
+            onClick={() => this.props.onDelete(this.props.counter.id)}
             className="btn btn-danger ms-1"
           >
             Delete
